@@ -1,0 +1,8 @@
+import pandas as pd
+
+df = pd.read_csv("info.csv", index_col=0)
+
+res = df[["location", "sex", "age", "cause", "year", "val"]]
+
+print(df.head())
+res.to_csv("result.csv", index=False)
